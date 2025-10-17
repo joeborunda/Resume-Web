@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>José Antonio Borunda Monsiváis — Resume</title>
+  <meta name="description" content="Resume for José Antonio Borunda Monsiváis. Senior Technical Documentation Writer." />
+  <meta name="theme-color" content="#0f172a" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #0f172a; /* slate-900 */
+      --muted: #475569; /* slate-600 */
+      --accent: #0ea5e9; /* sky-500 */
+      --border: #e2e8f0; /* slate-200 */
+      --chip-bg: #f1f5f9; /* slate-100 */
+      --chip-text: #334155; /* slate-700 */
+      --section-gap: 2rem;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1220;
+        --text: #e2e8f0;
+        --muted: #94a3b8;
+        --accent: #38bdf8;
+        --border: #1f2937;
+        --chip-bg: #111827;
+        --chip-text: #cbd5e1;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
+      color: var(--text);
+      background: radial-gradient(1200px 600px at 50% -200px, rgba(56, 189, 248, 0.15), transparent 60%), var(--bg);
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1rem 4rem;
+    }
+
+    header.resume-header {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+      margin-bottom: var(--section-gap);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      header.resume-header {
+        grid-template-columns: 1fr auto;
+        align-items: end;
+      }
+    }
+
+    h1 {
+      font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+      margin: 0;
+      letter-spacing: 0.2px;
+    }
+
+    .title {
+      color: var(--muted);
+      font-weight: 500;
+      margin-top: 0.25rem;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      align-content: center;
+    }
+
+    .contact a { color: var(--accent); text-decoration: none; }
+    .contact a:hover, .contact a:focus { text-decoration: underline; outline: none; }
+    .contact .address { color: var(--muted); }
+
+    section { margin-top: var(--section-gap); }
+
+    section > h2 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin: 0 0 0.75rem;
+    }
+
+    .summary { font-size: 1.05rem; }
+
+    .job { padding: 1rem 0; border-top: 1px solid var(--border); }
+    .job:first-of-type { border-top: 0; }
+
+    .job h3 { margin: 0 0 0.25rem; font-size: 1.05rem; }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+    }
+
+    ul.bullets { margin: 0.5rem 0 0; padding-left: 1.25rem; }
+    ul.bullets li { margin: 0.35rem 0; }
+
+    .skills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+    .chip {
+      padding: 0.35rem 0.6rem;
+      border-radius: 999px;
+      background: var(--chip-bg);
+      color: var(--chip-text);
+      border: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+
+    footer {
+      margin-top: var(--section-gap);
+      color: var(--muted);
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .print-btn {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: var(--chip-bg);
+      color: var(--chip-text);
+      padding: 0.4rem 0.65rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+
+    .print-btn:hover { filter: brightness(0.98); }
+
+    .visually-hidden {
+      position: absolute !important;
+      height: 1px; width: 1px;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px);
+      white-space: nowrap;
+    }
+
+    @media print {
+      body { background: #fff; }
+      a { color: #000; text-decoration: none; }
+      a[href^="http"]:after { content: " (" attr(href) ")"; font-weight: normal; }
+      .print-btn, .no-print { display: none !important; }
+      .container { padding: 0; }
+      header.resume-header { margin-bottom: 1rem; padding-bottom: 0.5rem; }
+      .job, .project { break-inside: avoid; page-break-inside: avoid; }
+      @page { margin: 0.5in; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="resume-header" role="banner">
+      <div>
+        <h1>José Antonio Borunda Monsiváis</h1>
+        <div class="title">Senior Technical Documentation Writer</div>
+      </div>
+      <nav class="contact" aria-label="Contact">
+        <span class="address">Cerrada Vía Cite 1300, int. 57, Col. Adara Santiago de Querétaro, Qro., Mexico, C.P. 76246</span>
+        <a href="mailto:joseborunda@gmail.com">joseborunda@gmail.com</a>
+        <a href="tel:+525530680393">(55) 30 68 03 93</a>
+        <a href="https://github.com/joeborunda" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/jose-borunda-470277199/" rel="noopener">LinkedIn</a>
+      </nav>
+    </header>
+
+    <main id="content" role="main">
+      <section aria-labelledby="summary">
+        <h2 id="summary">Summary</h2>
+        <p class="summary">
+          I am seeking a position within a technology-driven company where I can apply my skills as a technical documentation writer and learn and develop new ones.
+        </p>
+      </section>
+
+      <section aria-labelledby="experience">
+        <h2 id="experience">Relevant Experience</h2>
+
+        <article class="job">
+          <h3>Senior Technical Documentation Writer — Grupo Kabat</h3>
+          <div class="meta">
+            <span>Mexico City, Mexico</span>
+            <span>January 2025 – Present</span>
+          </div>
+          <ul class="bullets">
+            <li>Spearheaded documentation for security-surveillance applications used by local government agencies, including Mexico City’s C5 command center.</li>
+            <li>Maintained and routinely updated both end-user guides and developer documentation.</li>
+            <li>Built a developer tools portal and API reference site using the Docusaurus static-site generator.</li>
+            <li>Implemented a full Docs-as-Code workflow—authoring, version control, and automated builds—within GitLab repositories.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <h3>Senior Technical Documentation Writer — ITJ/Dexcom</h3>
+          <div class="meta">
+            <span>San Diego, CA, US</span>
+            <span>July 2024 – November 2024</span>
+          </div>
+          <ul class="bullets">
+            <li>Updated technical documentation for continuous glucose monitoring medical equipment and software, focusing on reducing vulnerabilities for sensitive information.</li>
+            <li>Entered change orders and updated documentation required by the United States Food and Drug Administration (FDA).</li>
+            <li>Developed Wiki-based and Markdown documentation across various departments, ensuring compliance and enhancing security measures.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <h3>Senior Technical Documentation Writer — BP3/Veritext</h3>
+          <div class="meta">
+            <span>Austin, TX, US</span>
+            <span>January 2024 – July 2024</span>
+          </div>
+          <ul class="bullets">
+            <li>Revised and published agile procedures documentation for a legal services company.</li>
+            <li>Delivered documentation for multiple applications, including release notes, release management guidelines, software design requirements, bug triage procedures, flow charts, diagrams, and user guides.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <h3>Senior Technical Documentation Writer (Project-based) — Pentalog/CyrusOne</h3>
+          <div class="meta">
+            <span>Guadalajara / Dallas, TX, US</span>
+            <span>September 2023 – December 2023</span>
+          </div>
+          <ul class="bullets">
+            <li>Enhanced documentation portal for a multi-location data center company across the US, focusing on cybersecurity and infrastructure security documentation.</li>
+            <li>Created comprehensive user guides and security processes; collaborated with product managers to revamp release notes communication, improving customer engagement.</li>
+            <li>Built complete portal UI documentation and developed API tools for developers, increasing developer satisfaction.</li>
+            <li>Updated client-facing and internal product documentation and API documentation, focusing on security endpoints through Active Directory (AD), and created UI/UX custom documentation.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <h3>Senior Technical Documentation Writer — Nimble Gravity/Included Health</h3>
+          <div class="meta">
+            <span>Guadalajara / San Francisco, CA, US</span>
+            <span>September 2022 – July 2023</span>
+          </div>
+          <ul class="bullets">
+            <li>Prepared the Engineering Handbook and onboarding guide for new developers within a docs-as-code environment in GitHub.</li>
+            <li>Generated GraphQL documentation focused on a microservice-oriented applications model.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <h3>Technical Documentation Specialist — Yalo</h3>
+          <div class="meta">
+            <span>Mexico City, Mexico</span>
+            <span>March 2020 – July 2022</span>
+          </div>
+          <ul class="bullets">
+            <li>Developed comprehensive product documentation for a conversational commerce company, including user guides and API documentation for internal and end users.</li>
+            <li>Built quick tutorial guides and established the documentation platform from scratch, ensuring a robust and user-friendly system.</li>
+            <li>Produced professional training videos for customers and partners.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <h3>Proposal Writer (Project-based) — Inspiralia</h3>
+          <div class="meta">
+            <span>Mexico City, Mexico</span>
+            <span>January 2020 – January 2021</span>
+          </div>
+          <ul class="bullets">
+            <li>Developed project proposals for grants awarded by the US Air Force (USAF) in two phases.</li>
+            <li>Collaborated with companies and student-based projects to secure grants for research and development initiatives.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section aria-labelledby="skills">
+        <h2 id="skills">Relevant Skills</h2>
+        <div class="skills" role="list">
+          <span class="chip" role="listitem">Agile methodology</span>
+          <span class="chip" role="listitem">JIRA</span>
+          <span class="chip" role="listitem">Confluence</span>
+          <span class="chip" role="listitem">Markdown</span>
+          <span class="chip" role="listitem">CSS</span>
+          <span class="chip" role="listitem">JavaScript</span>
+          <span class="chip" role="listitem">HTML</span>
+          <span class="chip" role="listitem">Git</span>
+          <span class="chip" role="listitem">GitHub</span>
+          <span class="chip" role="listitem">GraphQL</span>
+          <span class="chip" role="listitem">MySQL</span>
+          <span class="chip" role="listitem">Figma</span>
+          <span class="chip" role="listitem">Draw.io</span>
+          <span class="chip" role="listitem">Visio</span>
+          <span class="chip" role="listitem">PlantUML</span>
+          <span class="chip" role="listitem">VS Code</span>
+          <span class="chip" role="listitem">Microsoft 365</span>
+          <span class="chip" role="listitem">Google Workspace</span>
+          <span class="chip" role="listitem">Adobe Suite</span>
+          <span class="chip" role="listitem">API docs: Postman</span>
+          <span class="chip" role="listitem">API docs: Swagger</span>
+          <span class="chip" role="listitem">API docs: Stoplight</span>
+          <span class="chip" role="listitem">API docs: Readme</span>
+          <span class="chip" role="listitem">SSG docs</span>
+          <span class="chip" role="listitem">GCP</span>
+          <span class="chip" role="listitem">AWS</span>
+          <span class="chip" role="listitem">Azure</span>
+          <span class="chip" role="listitem">Docs-as-Code</span>
+          <span class="chip" role="listitem">Video production</span>
+          <span class="chip" role="listitem">Excellent communication</span>
+          <span class="chip" role="listitem">Team collaboration</span>
+          <span class="chip" role="listitem">Self-driven</span>
+          <span class="chip" role="listitem">Quick learner</span>
+        </div>
+      </section>
+
+      <section aria-labelledby="education">
+        <h2 id="education">Education</h2>
+        <article>
+          <h3 class="visually-hidden">University of Texas at El Paso</h3>
+          <div class="meta">
+            <span>University of Texas at El Paso</span>
+            <span>B.S. Electrical Engineering, Systems and Communications</span>
+            <span>GPA: 3.4</span>
+            <span>May 2006</span>
+          </div>
+        </article>
+      </section>
+
+      <section aria-labelledby="certs">
+        <h2 id="certs">Certifications & Courses</h2>
+        <ul class="bullets">
+          <li>Google Cloud Digital Leader — Certified January 2025</li>
+          <li>Full Stack Developer Course — EDX-ITESM (September 2023 – February 2024)</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="languages">
+        <h2 id="languages">Languages</h2>
+        <div>Fluent in English and Spanish.</div>
+      </section>
+
+      <section aria-labelledby="references">
+        <h2 id="references">References</h2>
+        <div>Available upon request.</div>
+      </section>
+    </main>
+
+    <footer>
+      <div>Last updated: <time id="last-updated" datetime=""></time></div>
+      <button class="print-btn no-print" onclick="window.print()">Download PDF</button>
+    </footer>
+  </div>
+
+  <script>
+    // Stamp today's date in ISO format for "Last updated".
+    (function () {
+      var el = document.getElementById('last-updated');
+      if (!el) return;
+      var now = new Date();
+      var yyyy = now.getFullYear();
+      var mm = String(now.getMonth() + 1).padStart(2, '0');
+      var dd = String(now.getDate()).padStart(2, '0');
+      var iso = yyyy + '-' + mm + '-' + dd;
+      el.textContent = iso;
+      el.setAttribute('datetime', iso);
+    })();
+  </script>
+</body>
+</html>
